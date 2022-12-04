@@ -1,3 +1,3 @@
 # Patterns of desings
 
-Here's some examples of patterns of designs
+Here's some examples about patterns of designs
