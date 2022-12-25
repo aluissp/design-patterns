@@ -1,5 +1,6 @@
 from . import Builder
 from cars import Manual
+from components import Engine, Gps, TripComputer
 
 
 class ManualBuilder(Builder):
@@ -16,14 +17,20 @@ class ManualBuilder(Builder):
         self.reset()
         return product
 
+    def set_car_type(self, car_type: str) -> None:
+        self._product._Manual__set_car_type(car_type)
+
     def set_seats(self, number: int) -> None:
-        self._product.add('seats', number)
+        self._product._Manual__set_seats(number)
 
-    def set_engine(self, engine) -> None:
-        self._product.add('engine', engine)
+    def set_engine(self, engine: Engine) -> None:
+        self._product._Manual__set_engine(engine)
 
-    def set_trip_computer(self, trip_computer) -> None:
-        self._product.add('trip_computer', trip_computer)
+    def set_trip_computer(self, trip_computer: TripComputer) -> None:
+        self._product._Manual__set_trip_computer(trip_computer)
 
-    def set_gps(self, gps) -> None:
-        self._product.add('gps', gps)
+    def set_gps(self, gps: Gps) -> None:
+        self._product._Manual__set_gps(gps)
+
+    def set_transmision(self, transmission: str) -> None:
+        self._product._Manual__set_transmission(transmission)

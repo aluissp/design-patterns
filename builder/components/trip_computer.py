@@ -1,11 +1,11 @@
-from cars import Car
+from typing import Any
 
 
 class TripComputer:
     def __init__(self) -> None:
         self.__car = None
 
-    def set_car(self, car: Car):
+    def set_car(self, car: Any):
         self.__car = car
 
     def show_fue_level(self):
